@@ -185,3 +185,25 @@ textarea.input{min-height:160px}
 .sub-h{font-size:16px;margin:0 0 10px}
 .fine{list-style:none;margin:10px 0;padding:0;font-size:13px;color:var(--muted);display:grid;gap:2px}
 .price-tbl th{width:auto}.price-tbl td{width:1%;white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+
+/* 個人向け：問いかけ・特徴・比較表 */
+.ask{display:grid;gap:10px;border-left:3px solid var(--ink);padding-left:16px}
+.ask .q{font-size:18px;font-weight:700}
+.feat-num{font-size:28px;font-weight:700;color:var(--muted);line-height:1}
+.tbl-scroll{overflow-x:auto;max-width:900px;margin:0 auto}
+.tbl.compare{min-width:560px}
+.tbl.compare th,.tbl.compare td{text-align:center;vertical-align:middle}
+.tbl.compare tbody th{text-align:left;width:auto}
+.tbl.compare th small{display:block;font-size:11px;font-weight:400;color:var(--muted)}
+.tbl.compare td{font-size:18px}
+.tbl.compare .us{background:#e9e9e9;font-weight:700}
+.tbl.compare{table-layout:fixed}
+.tbl.compare thead th{width:22%;white-space:normal}
+.tbl.compare thead th:first-child{width:34%}
+@media(max-width:559px){
+  .tbl.compare{min-width:0;font-size:12px}
+  .tbl.compare th,.tbl.compare td{padding:8px 4px}
+  .tbl.compare tbody th{padding-left:8px}
+  .tbl.compare thead th:first-child{width:31%}
+  .tbl.compare td{font-size:15px}
+}
