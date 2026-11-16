@@ -15,8 +15,8 @@
 | ② | 事業内容 | `service.html` | 概要（一行コピー＋説明）／3つのサービス（個人・法人向け空間・OEM）／ご依頼の流れ（7ステップ）／対応内容の表 |
 | ②-1 | 個人向け | `service-personal.html` | サービス詳細（香水メイン）→ 実績 → 料金 → Q&A → 問い合わせCTA |
 | ②-2 | 法人向け | `service-business.html` | サービス詳細（空間の香りプロデュース＋導入業種）→ 実績 → 料金 → OEM → Q&A → 問い合わせCTA |
-| ③ | ブランドコンセプト | `concept.html` | コンセプト／2つのブランド（SpAce・Op.parfum）／下層ページへの入口 |
-| ③-1 | ロゴの意味 | `concept-logo.html` | SpAce と Op.parfum それぞれのロゴの意味 |
+| ③ | ブランドコンセプト | `concept.html` | コンセプト／2つのブランド（SpAce・Op.PARFUM）／下層ページへの入口 |
+| ③-1 | ロゴの意味 | `concept-logo.html` | SpAce と Op.PARFUM それぞれのロゴの意味 |
 | ③-2 | 代表の想い | `concept-message.html` | 代表メッセージ／全社的な方向性 |
 | ④ | 運営について | `about.html` | 運営情報／メンバー紹介 |
 | ⑤ | お問い合わせ | `contact.html` | フォーム（入力→確認→完了） |
@@ -34,7 +34,7 @@
 
 ## 要確認ポイント
 
-1. 2つのブランド（SpAce・Op.parfum）がそれぞれ何を扱うか、サービスページとつなぐか
+1. 2つのブランド（SpAce・Op.PARFUM）がそれぞれ何を扱うか、サービスページとつなぐか
 
 ※ 問い合わせCTA（各ページ下の帯）は全ページ共通で表示
 
