@@ -446,3 +446,6 @@ textarea.input{min-height:160px}
 .closing{font-weight:700;font-size:15px;line-height:1.9;margin-top:8px}
 .pc-only{display:none}
 @media(min-width:768px){.pc-only{display:inline}}
+.msg-body{display:grid;gap:16px;font-size:15px;line-height:2}
+.msg-body blockquote{margin:4px 0;padding:12px 0 12px 20px;border-left:3px solid var(--ink);font-size:18px;font-weight:700;line-height:1.7}
+@media(min-width:768px){.msg-body blockquote{font-size:22px}}
