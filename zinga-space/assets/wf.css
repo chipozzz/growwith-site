@@ -442,36 +442,3 @@ textarea.input{min-height:160px}
 .fgroup ul a::before{content:"－ ";color:var(--line)}
 .site-footer .legal{font-size:12px}
 .site-footer .fgroup ul{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}
-
-/* ストーリー仕立て（ブランドコンセプト・ロゴ・代表の想い） */
-.story-lead{font-size:15px;line-height:2.1;max-width:720px;margin:24px auto 0}
-@media(min-width:768px){.story-lead{font-size:17px}}
-.pc-only{display:none}
-@media(min-width:768px){.pc-only{display:inline}}
-.chap{font-size:28px;font-weight:700;color:var(--line);line-height:1;display:flex;align-items:baseline;gap:12px}
-.chap span{font-size:11px;letter-spacing:.25em;color:var(--muted);font-weight:700}
-@media(min-width:768px){.chap{font-size:40px}}
-.zz-row p+p{margin-top:12px}
-.brand-hero{padding:72px 0 24px;text-align:center}
-.brand-hero.gray{background:var(--fill)}
-.brand-hero h2{font-size:22px;line-height:1.5;margin-top:24px}
-@media(min-width:768px){.brand-hero h2{font-size:32px}}
-.logo-big{width:200px;height:200px;margin:16px auto 0;border:1px solid var(--dark);border-radius:50%;display:grid;place-items:center;background:#fff;font-size:12px;color:var(--muted)}
-@media(min-width:768px){.logo-big{width:260px;height:260px}}
-.name-words{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 40px;margin-top:28px}
-.name-words div{display:grid;gap:2px}
-.name-words b{font-size:28px;letter-spacing:.06em}
-.name-words span{font-size:12px;color:var(--muted)}
-@media(min-width:768px){.name-words b{font-size:40px}}
-.msg-open{display:grid;gap:20px;align-content:center}
-.msg-open .big{font-size:26px;font-weight:700;line-height:1.6}
-@media(min-width:768px){.msg-open .big{font-size:38px}}
-.quote-band .quote{font-size:26px;font-weight:700;line-height:1.6;margin:16px 0 20px}
-@media(min-width:768px){.quote-band .quote{font-size:42px}}
-.vision-list{list-style:none;margin:0 auto;padding:0;max-width:860px;display:grid}
-.vision-list li{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
-.vision-list li:first-child{border-top:1px solid var(--line)}
-.vision-list .n{font-size:40px;font-weight:700;color:var(--line);line-height:1}
-@media(min-width:768px){.vision-list li{grid-template-columns:120px 1fr}.vision-list .n{font-size:64px}}
-.vision-list h3{font-size:18px;margin:0 0 4px}
-@media(min-width:768px){.zz.rev .zz-row .zz-img{order:2}}
