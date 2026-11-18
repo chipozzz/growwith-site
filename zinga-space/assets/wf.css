@@ -423,3 +423,22 @@ textarea.input{min-height:160px}
 @media(min-width:768px){.split.rev>:first-child{order:2}}
 .tiles{grid-template-columns:repeat(2,1fr)}
 @media(max-width:767px){.tile .img b{font-size:12px;padding:6px 10px}.tile p{font-size:13px}}
+
+/* フッターメニュー：親を太字の見出し、子を小さく */
+.site-footer{padding-top:56px}
+.site-footer .fcols{grid-template-columns:1fr}
+@media(min-width:960px){.site-footer .fcols{grid-template-columns:1fr 2fr;gap:64px}}
+.fnav{display:grid;gap:0}
+@media(min-width:768px){.fnav{grid-template-columns:repeat(3,1fr);gap:32px}}
+.fgroup{display:grid;align-content:start;gap:8px;padding:16px 0;border-top:1px solid var(--line)}
+@media(min-width:768px){.fgroup{padding:0 0 0 20px;border-top:0;border-left:1px solid var(--line)}}
+.fgroup small{font-size:10px;letter-spacing:.2em;color:var(--muted)}
+.fgroup .fparent{font-size:15px;font-weight:700}
+.fgroup .fparent::after{content:" →";font-weight:400;color:var(--muted)}
+.fgroup .fparent[target]::after{content:""}
+.fgroup ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 16px}
+@media(min-width:768px){.fgroup ul{display:grid;gap:6px}}
+.fgroup ul a{font-size:13px;color:#555}
+.fgroup ul a::before{content:"－ ";color:var(--line)}
+.site-footer .legal{font-size:12px}
+.site-footer .fgroup ul{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}
