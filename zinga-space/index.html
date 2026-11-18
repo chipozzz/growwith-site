@@ -10,37 +10,61 @@
 <div id="wf-header"></div>
 
 <main>
-  <!-- ① HERO -->
-  <section class="hero">
-    <div class="ph"><span>HERO メインビジュアル（写真 / 動画）</span></div>
-    <div class="copy"><div class="container"><div class="box">
+  <!-- ① HERO：全画面のスライド -->
+  <section class="hero2">
+    <div class="ph"><span>HERO メインビジュアル（写真 / 動画・3枚をスライド）</span></div>
+    <div class="copy"><div class="container">
       <span class="note">① TOP / HERO</span>
       <h1>香りで心を動かし、<br>記憶に残る体験を届ける。</h1>
-      <p style="margin-top:8px;color:var(--muted)">視覚や言葉だけでは伝えきれない、ブランドや空間の本質を香りで届けることで、記憶に残る体験をお届けします。</p>
-    </div></div></div>
+      <p class="sub">視覚や言葉だけでは伝えきれない、ブランドや空間の本質を香りで届けることで、記憶に残る体験をお届けします。</p>
+    </div></div>
+    <div class="dots" aria-hidden="true"><span>01</span><i class="on"></i><i></i><i></i><span>03</span></div>
+    <div class="scroll-ind" aria-hidden="true">SCROLL</div>
   </section>
 
+  <!-- イントロ：事業のひとこと＋重なる写真 -->
+  <section class="section" id="intro"><div class="container split">
+    <div>
+      <span class="note">イントロ（事業内容へ）</span>
+      <div class="sec-head left"><p class="en">ABOUT US</p><h2>私たちについて</h2></div>
+      <p class="tagline">香りの好き嫌いでは、作らない。感情と記憶に寄り添う、唯一無二の香りを。</p>
+      <p>個人では、オーダーフレグランスの制作、法人では、空間の香り導入からアメニティやグッズの企画/制作、OEMを行なっております。</p>
+      <a class="btn arrow" href="service.html" style="margin-top:24px">事業内容を見る</a>
+    </div>
+    <div class="overlap"><div class="ph r43"><span>写真1</span></div><div class="ph r43"><span>写真2</span></div></div>
+  </div></section>
+
   <!-- ① 個人・空間・OEMの3つの丸 -->
-  <section class="section" id="target">
+  <section class="section gray" id="target">
     <div class="container">
       <div class="sec-head center">
         <span class="note">① 個人・空間・OEMの3つの丸 → 各詳細へ</span>
         <p class="en">FOR YOU</p>
         <h2>それぞれの個性に寄り添った香りづくりを</h2>
       </div>
-      <div class="circles">
-        <a class="circle" href="service-personal.html">
-          <span class="en">PERSONAL</span><b>個人</b><small>オーダーフレグランス</small></a>
-        <a class="circle" href="service-business.html">
-          <span class="en">SPACE</span><b>空間</b><small>イベント・オフィシャルの香り</small></a>
-        <a class="circle" href="service-business.html#oem">
-          <span class="en">OEM</span><b>OEM</b><small>販売目的の商品開発</small></a>
+      <div class="targets">
+        <a class="target" href="service-personal.html"><div class="ph"><span>写真</span></div>
+          <span class="en">PERSONAL</span><b>個人</b><small>オーダーフレグランス</small><span class="go">→</span></a>
+        <a class="target" href="service-business.html"><div class="ph"><span>写真</span></div>
+          <span class="en">SPACE</span><b>空間</b><small>イベント・オフィシャルの香り</small><span class="go">→</span></a>
+        <a class="target" href="service-business.html#oem"><div class="ph"><span>写真</span></div>
+          <span class="en">OEM</span><b>OEM</b><small>販売目的の商品開発</small><span class="go">→</span></a>
       </div>
     </div>
   </section>
 
+  <!-- ブランドコンセプトへの帯 -->
+  <section class="band" id="concept-band">
+    <div>
+      <span class="note">ブランドコンセプトへ（提案）</span>
+      <p class="en">BRAND CONCEPT</p>
+      <h2>目に見えない香りで、<br>心と記憶に残る体験を。</h2>
+      <a class="btn arrow" href="concept.html">ブランドコンセプトを見る</a>
+    </div>
+  </section>
+
   <!-- ① 料金について -->
-  <section class="section gray" id="price">
+  <section class="section" id="price">
     <div class="container">
       <div class="sec-head center">
         <span class="note">① 料金について</span>
@@ -61,6 +85,31 @@
           <p>販売目的の商品開発</p><p class="yen">¥165,000〜<small style="font-size:13px;font-weight:400">（税込）</small></p>
           <a class="more" href="service-business.html#oem">OEMについて見る →</a></div></div>
       </div>
+    </div>
+  </section>
+
+  <!-- 実績・お客様の声（スライダー） -->
+  <section class="section gray" id="works">
+    <div class="container">
+      <div class="slider-head">
+        <div class="sec-head left"><span class="note">実績・お客様の声（提案）</span><p class="en">WORKS</p><h2>実績・お客様の声</h2></div>
+        <div class="arrows"><button type="button" aria-label="前へ">←</button><button type="button" aria-label="次へ">→</button></div>
+      </div>
+      <div class="slider">
+        <div class="card"><div class="ph r43"><span>実績写真</span></div><span class="tag">個人</span><h3>実績タイトル</h3><p style="font-size:13px;color:var(--muted)">概要・お客様の声</p></div>
+        <div class="card"><div class="ph r43"><span>実績写真</span></div><span class="tag">空間</span><h3>実績タイトル</h3><p style="font-size:13px;color:var(--muted)">概要・お客様の声</p></div>
+        <div class="card"><div class="ph r43"><span>実績写真</span></div><span class="tag">OEM</span><h3>実績タイトル</h3><p style="font-size:13px;color:var(--muted)">概要・お客様の声</p></div>
+        <div class="card"><div class="ph r43"><span>実績写真</span></div><span class="tag">空間</span><h3>実績タイトル</h3><p style="font-size:13px;color:var(--muted)">概要・お客様の声</p></div>
+      </div>
+      <div class="slider-dots" aria-hidden="true"><i class="on"></i><i></i></div>
+    </div>
+  </section>
+
+  <!-- Instagram -->
+  <section class="section" id="instagram">
+    <div class="container">
+      <div class="sec-head center"><span class="note">Instagram（提案・アカウントがあれば）</span><p class="en">INSTAGRAM</p><h2>@アカウント名</h2></div>
+      <div class="insta"><div class="ph"><span>投稿</span></div><div class="ph"><span>投稿</span></div><div class="ph"><span>投稿</span></div><div class="ph"><span>投稿</span></div><div class="ph"><span>投稿</span></div><div class="ph"><span>投稿</span></div></div>
     </div>
   </section>
 </main>

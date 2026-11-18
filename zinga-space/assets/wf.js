@@ -19,8 +19,8 @@
         '<li class="has-sub"><a href="concept.html"' + cur('concept') + '>ブランドコンセプト</a>' +
           '<div class="sub"><a href="concept-logo.html">ロゴの意味</a><a href="concept-message.html">代表の想い</a></div></li>' +
         '<li><a href="about.html"' + cur('about') + '>運営について</a></li>' +
-        '<li><a href="contact.html"' + cur('contact') + '>お問い合わせ</a></li>' +
         '<li>' + diag + '</li>' +
+        '<li><a class="btn-sm" href="contact.html"' + cur('contact') + '>お問い合わせ</a></li>' +
       '</ul></nav>' +
       '<button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span></button>' +
     '</div>' +
@@ -32,29 +32,34 @@
       '<li class="child"><a href="concept-logo.html">└ ロゴの意味</a></li>' +
       '<li class="child"><a href="concept-message.html">└ 代表の想い</a></li>' +
       '<li><a href="about.html">運営について</a></li>' +
-      '<li><a href="contact.html">お問い合わせ</a></li>' +
-      '<li class="diag-item">' + diag + '</li>' +
+      '<li class="drawer-btns"><a href="contact.html">お問い合わせ</a>' + diag + '</li>' +
     '</ul></div></header>';
 
   var footer =
-    '<section class="cta"><div class="container">' +
-      '<span class="note">共通 問い合わせCTA</span>' +
-      '<p style="font-size:12px;letter-spacing:.2em">CONTACT</p>' +
-      '<h2>香りのご相談はお気軽に</h2>' +
-      '<p>個人・店舗・法人、どなたでもお問い合わせいただけます。</p>' +
-      '<a class="btn" href="contact.html">お問い合わせへ</a>' +
+    '<section class="cta2"><div class="container wrap">' +
+      '<div><span class="note">共通 問い合わせCTA</span>' +
+        '<p class="en">CONTACT</p>' +
+        '<p style="margin-top:12px">香りのご相談はお気軽に。<br>個人・店舗・法人、どなたでもお問い合わせいただけます。</p></div>' +
+      '<div class="btns">' +
+        '<a class="btn fill arrow" href="contact.html">お問い合わせフォーム</a>' +
+        '<a class="btn arrow" href="service.html">サービスを見る</a>' +
+      '</div>' +
     '</div></section>' +
     '<footer class="site-footer"><div class="container">' +
-      '<div class="cols">' +
+      '<div class="fcols">' +
         '<div><a class="logo" href="index.html"><span class="mark">LOGO</span>ZINGA spAce</a>' +
-          '<p style="margin-top:12px;color:var(--muted)">所在地・連絡先などが入ります</p></div>' +
-        '<ul>' +
-          '<li><a href="service.html">事業内容</a></li><li><a href="service-personal.html">└ 個人向け</a></li>' +
-          '<li><a href="service-business.html">└ 法人向け</a></li><li><a href="about.html">運営について</a></li>' +
-          '<li><a href="contact.html">お問い合わせ</a></li><li><a href="concept.html">ブランドコンセプト</a></li>' +
-          '<li><a href="concept-logo.html">└ ロゴの意味</a></li><li><a href="concept-message.html">└ 代表の想い</a></li>' +
-          '<li><a href="' + DIAGNOSIS_URL + '" target="_blank" rel="noopener">香り診断 ↗</a></li>' +
-        '</ul>' +
+          '<p style="margin-top:12px;color:var(--muted)">香りで心を動かし、記憶に残る体験を届ける。</p>' +
+          '<p style="margin-top:8px;color:var(--muted)">所在地・連絡先などが入ります</p>' +
+          '<div class="sns" aria-label="SNS"><span>IG</span><span>SNS</span></div></div>' +
+        '<div><h4>SERVICE</h4><ul class="flist">' +
+          '<li><a href="service.html">事業内容</a></li><li><a href="service-personal.html">個人向け</a></li>' +
+          '<li><a href="service-business.html">法人向け</a></li><li><a href="service-business.html#oem">OEM</a></li></ul></div>' +
+        '<div><h4>BRAND</h4><ul class="flist">' +
+          '<li><a href="concept.html">ブランドコンセプト</a></li><li><a href="concept-logo.html">ロゴの意味</a></li>' +
+          '<li><a href="concept-message.html">代表の想い</a></li></ul></div>' +
+        '<div><h4>COMPANY</h4><ul class="flist">' +
+          '<li><a href="about.html">運営について</a></li><li><a href="contact.html">お問い合わせ</a></li>' +
+          '<li><a href="' + DIAGNOSIS_URL + '" target="_blank" rel="noopener">香り診断 ↗</a></li></ul></div>' +
       '</div>' +
       '<div class="legal"><nav>' +
         '<a href="tokushoho.html">特定商取引法に基づく表記</a>' +
