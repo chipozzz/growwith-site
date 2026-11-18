@@ -207,3 +207,19 @@ textarea.input{min-height:160px}
   .tbl.compare thead th:first-child{width:31%}
   .tbl.compare td{font-size:15px}
 }
+
+/* 要点を短く見せるブロック（ロゴの意味・代表の想い・コンセプト） */
+.brand-block{display:grid;gap:14px;min-width:0}
+.brand-block h2{font-size:22px;line-height:1.5}
+@media(min-width:768px){.brand-block h2{font-size:28px}}
+.brand-block .en{font-size:12px;letter-spacing:.2em;color:var(--muted);margin:0}
+.keys{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--muted)}
+.keys span{margin:0 6px;font-weight:400}
+.lead-txt{font-size:15px;line-height:2}
+.reasons{margin:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.reasons>div{padding:14px 0;border-bottom:1px solid var(--line)}
+.reasons dt{font-weight:700;font-size:14px;margin-bottom:4px}
+.reasons dd{margin:0;font-size:14px;color:#444}
+.sign{text-align:right;font-size:14px}
+.card.vision p:last-child{font-size:14px}
+.brand-block>.note,.brand-block>.note.todo{justify-self:start}
