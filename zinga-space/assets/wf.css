@@ -449,3 +449,34 @@ textarea.input{min-height:160px}
 .msg-body{display:grid;gap:16px;font-size:15px;line-height:2}
 .msg-body blockquote{margin:4px 0;padding:12px 0 12px 20px;border-left:3px solid var(--ink);font-size:18px;font-weight:700;line-height:1.7}
 @media(min-width:768px){.msg-body blockquote{font-size:22px}}
+
+/* =========================================================
+   改行の調整（単語の途中で改行しない）
+   - 文節の切れ目（wf.js が <wbr> を入れる）でだけ改行する
+   - 見出しは画面幅に合わせて文字の大きさがなめらかに変わる
+   ========================================================= */
+body{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
+h1,h2,h3,.q,.big,.quote{text-wrap:balance}
+/* 比較表：狭い画面では表の中だけ横にスクロール（列を潰して単語が切れないように） */
+@media(max-width:559px){
+  .tbl.compare{min-width:480px;font-size:13px}
+  .tbl.compare thead th:first-child{width:34%}
+}
+/* 見出しの文字サイズ：画面幅に合わせてなめらかに変える（最小〜最大） */
+.hero2 h1{font-size:clamp(22px,5.6vw,52px)}
+.page-head .en{font-size:clamp(30px,8vw,72px)}
+.sec-head .en{font-size:clamp(26px,6.4vw,48px)}
+.sec-head h2{font-size:clamp(14px,3.6vw,18px)}
+.question .q{font-size:clamp(20px,5.6vw,36px)}
+.band h2{font-size:clamp(20px,5.4vw,36px)}
+.brand-block h2{font-size:clamp(19px,4.8vw,28px)}
+.statement p.big,.msg-open .big{font-size:clamp(20px,5.6vw,36px)}
+.cta2 .en{font-size:clamp(34px,9vw,64px)}
+.zz-row h3{font-size:clamp(17px,4.4vw,24px)}
+/* 段組みの中の見出しは、その段の幅に合わせて大きさを決める */
+.split>*,.brand-block{container-type:inline-size}
+.brand-block h2{font-size:clamp(16px,5.6cqi,28px)}
+.split .sec-head h2{font-size:clamp(14px,4.8cqi,18px)}
+.page-head .en{font-size:clamp(24px,7vw,72px)}
+.doc h2{font-size:clamp(15px,4.4vw,17px)}
+.split .sec-head .en{font-size:clamp(24px,9cqi,48px)}

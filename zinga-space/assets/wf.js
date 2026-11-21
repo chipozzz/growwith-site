@@ -72,6 +72,49 @@
   if (h) h.outerHTML = header;
   if (f) f.outerHTML = footer;
 
+  // 日本語を「文節」で区切り、単語の途中で改行しないようにする
+  //  - 文節の切れ目にだけ改行候補（<wbr>）を入れ、ほかは word-break: keep-all で改行させない
+  //  - 助詞・送りがな（ひらがな）は前の語にくっつけ、カタカナの連続や数字・記号もまとめる
+  function phraseWrap(root) {
+    if (!window.Intl || !Intl.Segmenter) return;
+    var seg = new Intl.Segmenter('ja', { granularity: 'word' });
+    var HIRA = /^[ぁ-ゟ]+$/, KATA = /^[゠-ヺー-ヿｰ]+$/;
+    var NO_START = /^[、。，．・：；？！」』）)\]】〕〉》…‥ー〜～％%、,.]/;
+    var NO_END = /[「『（(\[【〔〈《¥￥#＃]$/;
+    var PUNCT_END = /[、。，．！？!?」』）)\s]$/;
+    function phrases(text) {
+      var out = [], cur = '', prev = '';
+      for (var it = seg.segment(text)[Symbol.iterator](), r = it.next(); !r.done; r = it.next()) {
+        var s = r.value.segment;
+        var join = cur !== '' && !PUNCT_END.test(cur) && (
+          NO_START.test(s) || NO_END.test(cur) ||
+          (HIRA.test(s) && s !== 'お' && s !== 'ご' && (!HIRA.test(prev) || HIRA.test(prev))) ||
+          (KATA.test(s) && KATA.test(prev)) || ((prev === 'お' || prev === 'ご') && /^[\u4E00-\u9FFF]/.test(s)) || /^[\d,.]+$/.test(s) && /[¥￥\d,.]$/.test(cur));
+        if (cur !== '' && !join) { out.push(cur); cur = ''; }
+        cur += s; prev = s;
+      }
+      if (cur) out.push(cur);
+      return out;
+    }
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null), nodes = [], n;
+    while ((n = walker.nextNode())) {
+      var tag = n.parentElement && n.parentElement.tagName;
+      if (/^(SCRIPT|STYLE|OPTION|TEXTAREA)$/.test(tag) || !/[぀-ヿ一-鿿]/.test(n.data)) continue;
+      nodes.push(n);
+    }
+    nodes.forEach(function (node) {
+      var parts = phrases(node.data);
+      if (parts.length < 2) return;
+      var frag = document.createDocumentFragment();
+      parts.forEach(function (p, i) {
+        if (i) frag.appendChild(document.createElement('wbr'));
+        frag.appendChild(document.createTextNode(p));
+      });
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+  phraseWrap(document.body);
+
   var btn = document.querySelector('.menu-btn');
   var drawer = document.querySelector('.drawer');
   if (btn && drawer) {
